@@ -52,3 +52,33 @@ function compressBoxesTwice(boxes, boxes2) {
   boxes.forEach((box) => console.log(box)); // O(n)
   boxes2.forEach((box) => console.log(box)); // O(m)
 }
+
+// Log all pairs of Array in this format: [a b] [b c] [c d] and so on
+
+const boxes = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+
+const logAllPairs = (boxes) => {
+  boxes.forEach((box, i) => {
+    if (i + 1 >= boxes.length) return;
+    console.log(`[${box} ${boxes[i + 1]}]`);
+  });
+};
+
+logAllPairs(boxes);
+
+// Log all pairs of Array
+// Here the Big O is O(n^2)
+
+const logAllPairs2 = (boxes) => {
+  boxes.forEach((box, i) => {
+    boxes.forEach((box2, j) => {
+      console.log(box, box2);
+    });
+  });
+};
+
+logAllPairs2(boxes);
+
+/**
+ * Rule 04: Drop non dominant terms
+ */
