@@ -8,7 +8,7 @@ function findNemo(array) {
     console.log("running");
     if (array[i] === "nemo") {
       console.log("Found NEMO!");
-      break;
+      return;
     }
   }
   let t1 = performance.now();
